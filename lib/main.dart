@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'homepage.dart';
+import 'customIcons/comingsoon_icons.dart' as cusIcon;
 
 void main() => runApp(Netflix());
 
@@ -20,7 +21,7 @@ class NetflixTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 4,
+        length: 5,
         child: Theme(
           data: ThemeData(
             brightness: Brightness.dark
@@ -30,8 +31,10 @@ class NetflixTabBar extends StatelessWidget {
             tabs: [
                 Tab(icon: Icon(Icons.home,), text: "Home",),
                 Tab(icon: Icon(Icons.search), text: "Search"),
+                Tab(icon: Icon(cusIcon.Comingsoon.Coming_Soon_2), text: "Coming Soon",),
                 Tab(icon: Icon(Icons.file_download), text: "Downloads"),
                 Tab(icon: Icon(Icons.list), text: "More"),
+
               ],
             unselectedLabelColor: Color(0xff999999),
             labelColor: Colors.white,
@@ -40,9 +43,10 @@ class NetflixTabBar extends StatelessWidget {
           body: TabBarView(
             children: [
               HomePage(),
-              Center( child: Text("Page 2")),
+              Center( child: Text("Page 2"),),
+              Center( child: Text("Page 2.5"),),
               Center( child: Text("Page 3"),),
-              Center( child: Text("Page 4")),
+              Center( child: Text("Page 4"),),
             ],
           ),
         ),
