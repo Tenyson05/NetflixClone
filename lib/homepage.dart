@@ -220,7 +220,7 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  int counter = 0;
+  static int counter = 0;
   List<Widget> makeOriginals() {
     List<Container> movieList = [];
     for (int i = 0; i < 6; i++) {
